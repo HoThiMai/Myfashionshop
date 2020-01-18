@@ -1,0 +1,63 @@
+CREATE DATABASE myshop;
+use myshop;
+========================================================
+CREATE TABLE clothe(
+  id int(11) NOT NULL,
+  name varchar(50) ,
+  price float,
+  color varchar(50),
+  type varchar(50) DEFAULT NULL,
+  image varchar(50)
+);
+INSERT INTO clothe (id, name, price, color, type, image ) VALUES
+(2, 'Ao Thun', 100000, 'yellow', 'shirt', 'images/clothe/clo1.jpg'),
+(3, 'Hoodie', 120, 'blue plus white', 'shirt', 'images/clothe/clo2.jpg'),
+(13, 'Q', 5000, 'black', 'Dress', 'images/clothe/clo3.jpg'),
+(14, 'AO len ', 5000, 'black', 'Dress', 'images/clothe/clo4.jpg'),
+(15, 'AO len ', 50000, 'black', 'dress', 'images/clothe/slide4.jpg'),
+(16, 'Vay', 50000, 'red', 'dress', 'images/clothe/slide2.jpg'),
+(17, 'AO len ', 5000, 'black', 'shirt', 'images/clothe/clo5.jpg'),
+(19, 'AO len ', 5000, 'red', 'dress', 'images/clothe/clo6.jpg'),
+(20, 'ao so mi', 600000, 'black', 'shirt', 'images/clothe/clo1.jpg'),
+(21, 'AO len ', 4000, 'black', 'shirt', 'images/clothe/clo2.jpg'),
+(22, 'AO len ', 5000, 'black', 'dress', 'images/clothe/clo3.jpg'),
+(25, 'AO len ', 5000, 'black', 'dress', 'images/clothe/slide.jfif'),
+(26, 'AO len ', 5000, 'black', 'dress', 'images/clothe/slide.jfif'),
+(28, 'Vay', 122, 'red', '', 'images/clothe/slide4.jfif'),
+(30, 'Hooddis', 100000, 'yellow', 'shirt', 'images/clothe/clo4.jpg'),
+(32, 'AO len ', 1000, 'black', 'dress', 'images/clothe/slide2.jfif'),
+(34, 'Ho', 900000, 'yellow', 'dress', 'images/clothe/clo5.jpg'),
+(35, 'Q', 5000, 'red', 'dress', 'images/clothe/slide4.jfif'),
+(36, 'Hoodie', 1500000, 'black', 'shirt', 'images/clothe/clo6.jpg');
+
+====================================================================
+CREATE TABLE users (
+  id int(11) NOT NULL,
+  fullname varchar(20),
+  account  varchar(20),
+  password  varchar(20),
+  role varchar(20)
+);
+
+INSERT INTO users (id, fullname, account, password, role) VALUES
+(1, 'Ho Thi Mai', 'mai', '123', 'admin'),
+(2, 'Ngo Huu Thang', 'thangngo', '12345', 'user'),
+(3, 'Truong Quoc Khanh', 'khanhtruong', '1234', 'user');
+
+=====================================================
+CREATE TABLE cart (
+  id int(11)not null AUTO_INCREMENT PRIMARY KEY,
+  idClo int(11),
+  name varchar(20) ,
+  price float,
+  color varchar(50),
+  type varchar(50),
+  image varchar(50),
+  quantity int(11),
+  total float 
+);
+
+
+
+
+
